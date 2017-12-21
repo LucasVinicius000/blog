@@ -98,7 +98,6 @@ section:after {
 }
 
 section img {
-  width: 44%;
   margin: 0 0 10px 4%;
 }
 
@@ -458,21 +457,34 @@ aside {
 	height: 0% auto;
 	FLOAT:RIGHT;
 }
-/*ewrjewirhewr*/
-div.gallery {
-    margin: 1%;
-    border: 1px solid #ccc;
-    float: left;
-    width: 20%;
-	padding: 0;
-}
+/*Galeria Flexbox*/
+.galeria { 
+		padding: .5vw;
+		font-size: 0;
+		flex-flow: row wrap; 
+		display: flex;
+	}
+	section div { 
+		flex: auto; 
+		width: 200px; 
+		margin: .5vw; 
+	}
+	section div img { 
+		width: 100%; 
+		height: auto; 
+	}
+
+	@media screen and (max-width: 400px) {
+		header div { margin: 0; }
+		header { padding: 0; }
+	}
 
 div.gallery:hover {
     border: 1px solid #777;
 }
 
 div.gallery img {
-    width: 100%;
+    width: 40%;
     height: 50%;
 }
 
